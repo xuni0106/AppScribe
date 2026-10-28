@@ -1,0 +1,42 @@
+﻿ShiJi 1.0.2 all-history verification
+Timestamp: 2026-10-23 11:0x +08:00
+Device: Pixel_10_Pro_XL (API 37, 1080x1920)
+
+Upgrade: 1.0.1 -> 1.0.2 via adb install -r: Success; existing DB preserved.
+Installed: versionCode=3 versionName=1.0.2 minSdk=26 targetSdk=35
+Artifact SHA256: c58911e43d2f82c3459c57e8967a4f15b8db63dd02d40d4a05216153be5ddf38
+Installed SHA256: c58911e43d2f82c3459c57e8967a4f15b8db63dd02d40d4a05216153be5ddf38
+Hashes match: True
+
+Sync model:
+- meta history_synced is the one-time 365-day backfill marker.
+- After that, sync starts at previous-day-1; only re-observed days are rewritten.
+- UsageDb.delete() is scoped to day=? for days actually re-observed, never a global trim.
+- All-time range is aggregated by SQL (SUM/GROUP BY) in UsageDb.readTotals().
+
+Observed all-time snapshot after tests:
+- 2022-07-04 .. 2026-10-23, activeDays=8, total=57h40m, 13 apps.
+- Screenshots: rank-all.png, trend-all.png, hours-all.png.
+
+Import test:
+- shiji-ancient-2022.json: 2022-07-04, com.example.ancient, 7,200,000 ms.
+- After import: all-time start 2022/7/4, total 57h37m, 13 apps (was 55h37m / 12 apps).
+- Schema 1; day year validation allows 2000..current+1.
+
+Export test:
+- shiji-usage-20261023-0309.json exported via SAF.
+- version=1.0.2, schema=1, dayPkg=19 rows, 8 distinct days, includes 2022-07-04,
+  total=20,762,1028 ms (57h40m).
+- Copy: export-1.0.2-final.json.
+
+Restart persistence:
+- force-stop + launch -> log "sync start=2026-10-22 backfill=false", then
+  "snapshot all 2022-07-04..2026-10-23 ... totalMs=207621028".
+- All-time total retained after incremental sync.
+
+Navigation regression:
+- 今日/排行/时段/趋势 switch both ways (1.0.1 fix retained).
+- 排行 全部, 趋势 全部, 时段 全部 selectable and render.
+- Crash buffer empty.
+
+Fresh install: backfill=true completed in ~1.4s; SAF import restored 2022 data (57h40m / 13 apps).

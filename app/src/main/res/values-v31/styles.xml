@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Shiji" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/ink</item>
+        <item name="android:colorAccent">@color/amber</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">@color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:forceDarkAllowed">false</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowSplashScreenBackground">@color/ink</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/ink</item>
+        <item name="android:windowSplashScreenAnimationDuration">360</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+﻿ShiJi final device smoke test
+Timestamp: 2026-10-23 09:58:28 +08:00
+Device: sdk_gphone16k_x86_64 (API 37)
+Install: Performing Streamed Install Success
+Top activity:     topResumedActivity=ActivityRecord{9289518 u0 com.shiji.tracker/.MainActivity t82}
+    versionCode=1 minSdk=26 targetSdk=35
+    versionName=1.0.0
+Usage access appop: GET_USAGE_STATS: allow; time=+4s102ms ago; rejectTime=+17m26s840ms ago
+Installed APK path: /data/app/~~mrnkyhJLW8sG6DCE7PKcgg==/com.shiji.tracker-AuoO-RD4qUboLJ0rbvCOHg==/base.apk
+Installed APK SHA256: 15cc2a41bbd3e36876230aa7a1282c26b42ba1d5a092d0b90531f3c87d450bb8
+Artifact SHA256:       15cc2a41bbd3e36876230aa7a1282c26b42ba1d5a092d0b90531f3c87d450bb8
+Hashes match: True
+Crash buffer after launch:
+(empty)

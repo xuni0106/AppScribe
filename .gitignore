@@ -1,0 +1,14 @@
+# Local build outputs
+/.gradle/
+/.kotlin/
+/app/build/
+/build/
+/build-native/
+/tools/
+/local.properties
+*.iml
+.idea/
+
+# Verification screenshots are reproducible; keep the text reports.
+/verify/*.png
+/verify/ui-*.xml

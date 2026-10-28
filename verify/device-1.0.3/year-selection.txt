@@ -1,0 +1,22 @@
+﻿ShiJi 1.0.3 year ranges verification
+Timestamp: 2026-10-23 14:0x +08:00
+Device: Pixel_10_Pro_XL (API 37, 1080x1920)
+
+Upgrade: 1.0.2 -> 1.0.3 via adb install -r: Success; existing DB preserved.
+Installed: versionCode=4 versionName=1.0.3 minSdk=26 targetSdk=35
+Artifact SHA256: f6a48600344a53d7d85a72dc9415116f3eaa409a92b11bd1bbc201ba13dcad06
+Installed SHA256: f6a48600344a53d7d85a72dc9415116f3eaa409a92b11bd1bbc201ba13dcad06
+Hashes match: True
+
+Range ladder:
+- 排行/时段: 日 / 7天 / 30天 / 一年; 趋势: 7天 / 30天 / 一年.
+- 一年 shows a year row: 2026 2025 2024 2023 2022 多年 (years with data, descending).
+- Default: 2026 (current year, because it has data). Cold start selected 2026.
+- 2026: 53h19m, 9 apps, 1/1..10/23.
+- 2025: 1h, 1 app, 1/1..12/31.
+- 2022: 2h, 1 app, 1/1..12/31.
+- 多年: 60h33m, 13 apps, 2022/7/4..2026/10/23.
+- Switching to 2025 on 排行 then opening 时段/趋势 一年 keeps 2025 selected.
+- Year chips fit within 360dp width (2026..多年, no clipping); row scrolls if more years exist.
+- Trend year view renders 296 daily points for current year; 多年 renders the full span with year labels.
+- Crash buffer empty.

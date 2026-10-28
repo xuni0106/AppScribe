@@ -1,0 +1,59 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.shiji.tracker'
+    compileSdk 36
+    buildToolsVersion '37.0.0'
+
+    defaultConfig {
+        applicationId 'com.shiji.tracker'
+        minSdk 26
+        targetSdk 35
+        versionCode 4
+        versionName '1.0.3'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../keystore/shiji-release.p12')
+            storePassword 'ShiJi-Local-2026'
+            keyAlias 'shiji'
+            keyPassword 'ShiJi-Local-2026'
+            enableV1Signing false
+            enableV2Signing true
+            enableV3Signing true
+            enableV4Signing false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            applicationIdSuffix '.debug'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        abortOnError false
+    }
+}
+
+// Convenience entry point used by this repository's delivery instructions:
+// .\gradlew.bat deliverRelease  ->  ..\artifacts\ShiJi-1.0.3-release.apk
+tasks.register('deliverRelease', Copy) {
+    dependsOn 'assembleRelease'
+    from layout.buildDirectory.file('outputs/apk/release/app-release.apk')
+    into rootProject.layout.projectDirectory.dir('artifacts')
+    rename { 'ShiJi-1.0.3-release.apk' }
+}

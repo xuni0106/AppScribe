@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">时迹</string>
+
+    <string name="tab_today">今日</string>
+    <string name="tab_rank">排行</string>
+    <string name="tab_hours">时段</string>
+    <string name="tab_trend">趋势</string>
+
+    <string name="range_day">日</string>
+    <string name="range_week">7天</string>
+    <string name="range_month">30天</string>
+    <string name="range_year">一年</string>
+    <string name="year_all">多年</string>
+
+    <string name="label_today">今日</string>
+    <string name="label_apps">应用</string>
+    <string name="label_peak">峰值</string>
+    <string name="label_longest">最长</string>
+    <string name="label_total">总时长</string>
+    <string name="label_active">活跃</string>
+    <string name="label_average">日均</string>
+    <string name="label_maximum">最高</string>
+
+    <string name="access_usage">使用情况访问</string>
+    <string name="action_authorize">去授权</string>
+    <string name="action_refresh">刷新</string>
+    <string name="action_export">导出</string>
+    <string name="action_import">导入</string>
+
+    <string name="section_appearance">外观</string>
+    <string name="theme_system">跟随</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+
+    <string name="section_backup">备份</string>
+    <string name="status_on">已开启</string>
+    <string name="status_off">未开启</string>
+    <string name="empty_data">暂无数据</string>
+
+    <string name="cd_settings">设置</string>
+    <string name="cd_back">返回</string>
+    <string name="cd_app_icon">应用图标</string>
+
+    <string name="msg_exported">已导出</string>
+    <string name="msg_imported">已导入 %1$d 天</string>
+    <string name="msg_import_failed">导入失败</string>
+    <string name="msg_export_failed">导出失败</string>
+    <string name="msg_read_failed">读取失败</string>
+    <string name="msg_invalid_file">文件无效</string>
+    <string name="msg_no_picker">没有可用的文件管理器</string>
+    <string name="version_format">v%1$s · %2$d</string>
+    <string name="cd_chart_hours">0 时至 23 时的使用时长分布</string>
+    <string name="cd_chart_trend">每日使用时长趋势</string>
+    <string name="cd_ring">应用时长占比</string>
+</resources>

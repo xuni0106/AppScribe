@@ -1,0 +1,18 @@
+﻿Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v3.2 scheme (APK Signature Scheme v3.2): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+V3.0 Signer: certificate DN: CN=ShiJi Release, OU=Personal, O=ShiJi, L=Local, ST=Local, C=CN
+V3.0 Signer: certificate SHA-256 digest: c306f74723b7ab362aae5e14813df3cbe820db0af45a9279a8cc25837f45ad10
+V3.0 Signer: certificate SHA-1 digest: 74cdc9876fc06efd0f68207192636be157ae0676
+V3.0 Signer: certificate MD5 digest: 48e89749f42e75f35da9673bdd6f7e95
+V3.0 Signer: key algorithm: RSA
+V3.0 Signer: key size (bits): 2048
+V3.0 Signer: public key SHA-256 digest: b07fae89298de14a31d109c27bfbf1077e45c40d88f7e4c62e6c10fb2bd8a73a
+V3.0 Signer: public key SHA-1 digest: a2236f6331528d9683dd094a1c826e15e633721d
+V3.0 Signer: public key MD5 digest: 1685f91701ff261d1ae50a75823dd013

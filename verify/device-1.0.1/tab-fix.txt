@@ -1,0 +1,34 @@
+﻿ShiJi 1.0.1 device verification
+Timestamp: 2026-10-23 10:5x +08:00
+Device: Pixel_10_Pro_XL (API 37, 1080x1920)
+Install: adb install -r over 1.0.0 -> Success
+Installed: versionCode=2 versionName=1.0.1 minSdk=26 targetSdk=35
+Crash buffer: empty
+
+Tab navigation (clickable content-desc / selected):
+t0  today : 今日 selected
+t1  tap 排行 -> 排行 selected
+t2  tap 今日 -> 今日 selected   (bug fixed)
+t3  tap 时段 -> 时段 selected
+t4  tap 今日 -> 今日 selected
+t5  tap 趋势 -> 趋势 selected
+t6  tap 今日 -> 今日 selected
+
+Ranking segmented control:
+s0  7天 selected (initial)
+s1  tap 日 -> 日 selected
+s2  tap 7天 -> 7天 selected   (bug fixed)
+s3  tap 30天 -> 30天 selected
+s4  tap 7天 -> 7天 selected
+s5  settings -> back -> 7天 selected, 排行 page restored
+
+Root cause: BottomNav and SegmentedControl lambdas captured the constructor
+parameter named 'selected' (initial index) instead of the mutable field; the
+initial tab/range therefore always matched and returned early. Fixed by
+renaming the parameter to initialSelected.
+
+Installed APK path: /data/app/~~VGXIUekLOuSMDf7isDLDuw==/com.shiji.tracker-J4lcy5Lqrs_WxAFddrCItw==/base.apk
+Installed APK SHA256: a1495737e90c09ab1a01c722e6c268fcbdbc9478eebf364c5d845b3b5ad6a332
+Artifact SHA256: a1495737e90c09ab1a01c722e6c268fcbdbc9478eebf364c5d845b3b5ad6a332
+Hashes match: True
+Crash buffer after tab/segment tests: empty

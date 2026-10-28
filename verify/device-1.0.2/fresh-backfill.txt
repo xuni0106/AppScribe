@@ -1,0 +1,8 @@
+﻿First-run / fresh-install checks (1.0.2)
+- adb shell pm clear com.shiji.tracker; appops set android:get_usage_stats allow
+- first launch log: sync start=2025-10-24 backfill=true days=4 rows=14
+- backfill completed in ~1.4s on the emulator (only 4 days of system events available)
+- log: snapshot all 2026-10-20..2026-10-23 activeDays=4 totalMs=181674123
+- then SAF import of shiji-usage-20261023-0309.json restored:
+  all-time 2022-07-04..2026-10-23, 57h40m, 13 apps
+- no crash buffer entries
